@@ -1,5 +1,9 @@
 /*面向对象程序设计*/
-
+/**
+ * s5在定义只有内部才用的特性（ attribute）时，描述了属性（ property）的各种特征。
+ ECMA-262 定义这些特性是为了实现 JavaScript 引擎用的，因此在 JavaScript 中不能直接访问它们。为了
+ 表示特性是内部值，该规范把它们放在了两对儿方括号中，例如[[Enumerable]]。
+ */
 /*ECMAScript 中有两种属性：数据属性和访问器属性*/
 /*有value 的是数据属性，没有的是访问器属性。*/
 /*在 不 支 持 Object.defineProperty() 方 法 的 浏 览 器 中 不 能 修 改 [[Configurable]] 、[[Enumerable]]。*/
