@@ -79,7 +79,7 @@ person2.constructor.prototype.sayAge = function () {
     console.log(this.age);
 };
 person1.sayAge();//29
-/*虽然在所有实现中都无法访问到[[Prototype]]，但可以通过 isPrototypeOf()方法来确定对象之间是否存在这种关系*/
+/*虽然在所有实现中都无法访问到[[Prototype]]，但可以通过 isPrototypeOf()方法来确定对象之间是否存在这种关系*/8
 console.log(Person.prototype.isPrototypeOf(person1)); //true
 console.log(Person.prototype.isPrototypeOf(person2)); //true
 /*Object.getPrototypeOf()：在所有支持的实现中，这个方法返回[[Prototype]]的值。例如：*/

@@ -1,25 +1,25 @@
-function Person() {
+function SuperType(){
+    this.property = true;
 }
-
-Person.prototype.name = "Nicholas";
-Person.prototype.age = 29;
-Person.prototype.job = "Software Engineer";
-Person.prototype.sayName = function () {
-    console.log(this.name);
+SuperType.prototype.getSuperValue = function () {
+    return this.property;
 };
-/*Person.prototype = {
-    //constructor : Person,//一定要写，原因：否则constructor 属性不再指向 Person 了
-    name : "Nicholas",
-    age : 29,
-    job: "Software Engineer",
-    sayName : function () {
-        alert(this.name);
-    }
-};*/
-person1 = new Person();
-person2 = new Person();
-person2.constructor.prototype.sayAge = function () {
-    console.log(this.age);
+function SubType() {
+    this.subProperty = false;
+}
+//继承SuperType
+SubType.prototype = new SuperType();
+SubType.prototype.getSubValue = function (){
+    return this.subProperty;
 };
-console.log(person2.constructor.prototype);//29
 
+var instance = new SubType();
+
+console.log(instance.getSubValue());
+
+/*
+* call（）：第一个参数是this值没有变化，变化的是其余参数都直接传递给函数。在使用call（
+方法时，传递给函数的参数必须逐个列举出来。例：call(obj,a,b,c)
+* apply（）：传递给函数的是参数数组。 例：apply(obj,[a,b,c])
+* */
+Object.create();
