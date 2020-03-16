@@ -4,6 +4,12 @@
  ECMA-262 定义这些特性是为了实现 JavaScript 引擎用的，因此在 JavaScript 中不能直接访问它们。为了
  表示特性是内部值，该规范把它们放在了两对儿方括号中，例如[[Enumerable]]。
  */
+
+/*
+* 由于在 ECMAScript 6 语言规范前，该属性从来没有被包括在 EcmaScript 语言规范中，
+* 所以不建议使用。为了确保 Web 浏览器的兼容性，__proto__ 属性已在 ECMAScript 6 语言规范中标准化，
+* 建议使用  Object.getPrototypeOf 和 Object.setPrototypeOf 来进行设置或读取
+*/
 /*ECMAScript 中有两种属性：数据属性和访问器属性*/
 /*有value 的是数据属性，没有的是访问器属性。*/
 /*在 不 支 持 Object.defineProperty() 方 法 的 浏 览 器 中 不 能 修 改 [[Configurable]] 、[[Enumerable]]。*/
