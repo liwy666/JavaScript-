@@ -9,6 +9,8 @@ server.on('request', function (request, response) {
     //响应
     response.write("hello");
     response.end();
+    //也可以
+    response.end("hello");
 });
 //启动服务
 server.listen(3000, function () {
