@@ -55,7 +55,7 @@ Person.prototype.sayName = function () {
 };
 //简便添加创建
 Person.prototype = {
-    constructor: Person,//一定要写，原因：否则constructor 属性不再指向 Person 了(如果 constructor 的值真的很重要)
+    constructor: Person,//一定要写，原因：否则constructor 属性不再指向 Person 了
     name: "Nicholas",
     age: 29,
     job: "Software Engineer",
@@ -73,13 +73,13 @@ person1 = new Person();
 person1.sayName(); //"Nicholas"
 person2 = new Person();
 person2.sayName(); //"Nicholas
-console.log(person1.sayName == person2.sayName); //true
+console.log(person1.sayName === person2.sayName); //true
 /*展示了 Person 构造函数、 Person 的原型属性以及 Person 现有的两个实例之间的关系*/
 person2.constructor.prototype.sayAge = function () {
     console.log(this.age);
 };
 person1.sayAge();//29
-/*虽然在所有实现中都无法访问到[[Prototype]]，但可以通过 isPrototypeOf()方法来确定对象之间是否存在这种关系*/8
+/*虽然在所有实现中都无法访问到[[Prototype]]，但可以通过 isPrototypeOf()方法来确定对象之间是否存在这种关系*/
 console.log(Person.prototype.isPrototypeOf(person1)); //true
 console.log(Person.prototype.isPrototypeOf(person2)); //true
 /*Object.getPrototypeOf()：在所有支持的实现中，这个方法返回[[Prototype]]的值。例如：*/
