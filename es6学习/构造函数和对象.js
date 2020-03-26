@@ -19,10 +19,10 @@ var object4 = new Star();
 console.log(object3.sing() === object4.sing());//false
 
 /**构造函数和原型*/
-//javascript规定每个构造函数都有一个prototype属于，指向另一对象。prototype就是一个对象，这个对象的所以方法和属性，都会被构造函数所拥有
+//javascript规定每个构造函数都有一个prototype属于，指向另一对象。prototype就是一个对象，这个对象的所有方法和属性，都会被构造函数所拥有
 //我们可以把不变的方法和属性，直接定义在prototype对象上
 //原型是什么？一个对象，我们也称prototype为原型对象
-//原型对象的作用上什么？共享方法
+//原型对象的作用是什么？共享方法
 
 //重写
 function Star(name, age) {
@@ -40,7 +40,7 @@ console.log(object3.sing() === object4.sing());//true
 
 /**对象原型__proto__*/
 //建议使用  Object.getPrototypeOf 和 Object.setPrototypeOf 来进行设置或读取
-//对象都有一个__proto__指向构造函数的prototype原型对象，之所以我们可以可以使用构造函数prototype原型对象的属于和方法，就是因为对象有__proto__原型的存在
+//对象(实例)都有一个__proto__指向构造函数的prototype原型对象，之所以我们可以可以使用构造函数prototype原型对象的属于和方法，就是因为对象有__proto__原型的存在
 console.log(object4);
 //对象身上有个__proto__属性，指向构造函数的原型对象
 console.log(object4.__proto__ === Star.prototype);//true
