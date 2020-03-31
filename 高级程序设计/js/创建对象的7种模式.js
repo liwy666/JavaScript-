@@ -115,7 +115,7 @@ function PersonTwo(name, age, job) {
 //方法
     if (typeof this.sayName != "function") {
         PersonTwo.prototype.sayName = function () {
-            alert(this.name);
+            console.log(this.name);
         };
     }
 }
